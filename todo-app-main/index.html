@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <title>To do App</title>
+</head>
+<body>
+
+  <div class="image_banner"></div>
+
+  <main class="wrapper">
+
+    <!-- ------------------------------- Header -------------------------------- -->
+
+    <header class="header__container">
+
+      <h1 class="header__container__title">TODO</h1>
+
+      <label for="theme-switcher" class="header__container__switch_icon"></label>
+      <input type="checkbox" style="display: none;" id="theme-switcher">
+    </header>
+
+    <!-- -------------------------------- Add List --------------------------------- -->
+
+    <div class="round add-todo">
+
+      <span class="circle-button"></span>
+      <input id="js-new_task" placeholder="Create a new todo..." ondrop="return false"></input>
+    </div>
+
+    <!-- -------------------------------- List --------------------------------- -->
+
+    <ul id="js-list" class="todo_list mostly-customized-scrollbar">
+
+    </ul>
+
+    <!-- ----------------------------- List Footer ----------------------------- -->
+
+    <div class="todo_list--footer">
+
+      <div class="list_footer round">
+
+        <p id="js-item_left">Items left</p>
+
+        <ul class="list__filter round desktop">
+
+          <input type="radio" name="radio" id="js-all_filter">
+          <label for="js-all_filter">All</label>
+
+          <input id="js-active_filter" type="radio" name="radio">
+          <label for="js-active_filter">Active</label>
+
+          <input id="js-completed_filter" type="radio" name="radio">
+          <label for="js-completed_filter">Completed</label>
+        </ul>
+
+        <button class="clear-btn" id="js-clear_completed">Clear completed</button>
+      </div>
+
+      <ul class="list__filter round mobile">
+
+        <input type="radio" name="radio" id="js-all_filter">
+        <label for="js-all_filter">All</label>
+
+        <input id="js-active_filter" type="radio" name="radio">
+        <label for="js-active_filter">Active</label>
+
+        <input id="js-completed_filter" type="radio" name="radio">
+        <label for="js-completed_filter">Completed</label>
+      </ul>
+    </div>
+
+    <footer class="footer">
+
+      <p class="drag_text">Drag and drop to reorder list</p>
+
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
